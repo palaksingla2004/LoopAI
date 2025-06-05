@@ -1,0 +1,32 @@
+Test Run Output (Replace with actual screenshot)
+
+Starting API tests...
+=== Testing Ingest Endpoint ===
+✅ Basic ingestion successful: 32dbcd15-24a6-4a78-8d30-db1318bd2205
+✅ HIGH priority ingestion successful: 2735d656-fcbf-4b81-a63c-bc4cc5977949
+✅ LOW priority ingestion successful: 540d927b-9001-4959-927e-32563c449716
+✅ Large batch ingestion successful: 4cdbc98e-e75b-49a4-8dc3-e513dd256ab0
+
+=== Testing Status Endpoint ===
+✅ Status for 32dbcd15-24a6-4a78-8d30-db1318bd2205: triggered
+   Batches: 2
+✅ Status for 2735d656-fcbf-4b81-a63c-bc4cc5977949: completed
+   Batches: 2
+✅ Status for 540d927b-9001-4959-927e-32563c449716: yet_to_start
+   Batches: 1
+✅ Status for 4cdbc98e-e75b-49a4-8dc3-e513dd256ab0: yet_to_start
+   Batches: 7
+✅ Invalid ID correctly returns 404
+
+=== Testing Priority Handling ===
+Submitted MEDIUM priority request: c1c82403-1247-4429-8df8-e856d6e8f7ae
+Submitted HIGH priority request: f278ddfe-2f4c-4c6c-a53a-049f72128970
+Monitoring processing to verify priority handling...
+✅ HIGH priority request processed before MEDIUM priority request
+
+=== Testing Rate Limiting ===
+Submitted request with multiple batches: 9cdd7a8e-0f9b-4588-b24d-f19706981f11
+Monitoring processing to verify rate limiting...
+✅ Rate limit respected
+
+=== All tests completed === 
